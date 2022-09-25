@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{59915ebc-fec3-482f-8c77-e207b847a536}</ProjectGuid>
+    <RootNamespace>Navmesh</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Public/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Private\DebugUtils\DebugDraw.cpp" />
+    <ClCompile Include="Private\DebugUtils\DetourDebugDraw.cpp" />
+    <ClCompile Include="Private\DebugUtils\RecastDebugDraw.cpp" />
+    <ClCompile Include="Private\DebugUtils\RecastDump.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourCrowd.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourLocalBoundary.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourObstacleAvoidance.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourPathCorridor.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourPathQueue.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourProximityGrid.cpp" />
+    <ClCompile Include="Private\DetourCrowd\DetourSharedBoundary.cpp" />
+    <ClCompile Include="Private\DetourTileCache\DetourTileCache.cpp" />
+    <ClCompile Include="Private\DetourTileCache\DetourTileCacheBuilder.cpp" />
+    <ClCompile Include="Private\DetourTileCache\DetourTileCacheDetail.cpp" />
+    <ClCompile Include="Private\DetourTileCache\DetourTileCacheRegion.cpp" />
+    <ClCompile Include="Private\Detour\DetourAlloc.cpp" />
+    <ClCompile Include="Private\Detour\DetourCommon.cpp" />
+    <ClCompile Include="Private\Detour\DetourNavMesh.cpp" />
+    <ClCompile Include="Private\Detour\DetourNavMeshBuilder.cpp" />
+    <ClCompile Include="Private\Detour\DetourNavMeshQuery.cpp" />
+    <ClCompile Include="Private\Detour\DetourNode.cpp" />
+    <ClCompile Include="Private\Recast\Recast.cpp" />
+    <ClCompile Include="Private\Recast\RecastAlloc.cpp" />
+    <ClCompile Include="Private\Recast\RecastArea.cpp" />
+    <ClCompile Include="Private\Recast\RecastContour.cpp" />
+    <ClCompile Include="Private\Recast\RecastFilter.cpp" />
+    <ClCompile Include="Private\Recast\RecastLayers.cpp" />
+    <ClCompile Include="Private\Recast\RecastMesh.cpp" />
+    <ClCompile Include="Private\Recast\RecastMeshDetail.cpp" />
+    <ClCompile Include="Private\Recast\RecastRasterization.cpp" />
+    <ClCompile Include="Private\Recast\RecastRegion.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Public\DebugUtils\DebugDraw.h" />
+    <ClInclude Include="Public\DebugUtils\DebugDrawLargeWorldCoordinates.h" />
+    <ClInclude Include="Public\DebugUtils\DetourDebugDraw.h" />
+    <ClInclude Include="Public\DebugUtils\RecastDebugDraw.h" />
+    <ClInclude Include="Public\DebugUtils\RecastDump.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourCrowd.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourLocalBoundary.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourObstacleAvoidance.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourPathCorridor.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourPathQueue.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourProximityGrid.h" />
+    <ClInclude Include="Public\DetourCrowd\DetourSharedBoundary.h" />
+    <ClInclude Include="Public\DetourTileCache\DetourTileCache.h" />
+    <ClInclude Include="Public\DetourTileCache\DetourTileCacheBuilder.h" />
+    <ClInclude Include="Public\Detour\DetourAlloc.h" />
+    <ClInclude Include="Public\Detour\DetourAssert.h" />
+    <ClInclude Include="Public\Detour\DetourCommon.h" />
+    <ClInclude Include="Public\Detour\DetourLargeWorldCoordinates.h" />
+    <ClInclude Include="Public\Detour\DetourNavMesh.h" />
+    <ClInclude Include="Public\Detour\DetourNavMeshBuilder.h" />
+    <ClInclude Include="Public\Detour\DetourNavMeshQuery.h" />
+    <ClInclude Include="Public\Detour\DetourNode.h" />
+    <ClInclude Include="Public\Detour\DetourStatus.h" />
+    <ClInclude Include="Public\Recast\Recast.h" />
+    <ClInclude Include="Public\Recast\RecastAlloc.h" />
+    <ClInclude Include="Public\Recast\RecastAssert.h" />
+    <ClInclude Include="Public\Recast\RecastLargeWorldCoordinates.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
