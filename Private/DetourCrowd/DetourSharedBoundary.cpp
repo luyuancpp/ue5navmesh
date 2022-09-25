@@ -196,7 +196,7 @@ bool dtSharedBoundary::IsValid(int32 Idx, dtNavMeshQuery* NavQuery, dtQueryFilte
 	bool bValid = HasSample(Idx);
 	if (bValid)
 	{
-		for (auto It : Data[Idx].Polys)
+		for (auto& It : Data[Idx].Polys)
 		{
 			const dtPolyRef TestRef = It;
 			const bool bValidRef = NavQuery->isValidPolyRef(TestRef, NavFilter);
