@@ -1209,7 +1209,8 @@ void dtCrowd::checkPathValidity(dtCrowdAgent** agents, const int nagents, const 
 		{
 			if (ag->targetState != DT_CROWDAGENT_TARGET_NONE)
 			{
-				requestMoveTargetReplan(idx, ag->targetRef, ag->targetPos);
+				//todo notice
+				requestMoveTargetReplan((unsigned int)idx, ag->targetRef, ag->targetPos);
 			}
 		}
 	}

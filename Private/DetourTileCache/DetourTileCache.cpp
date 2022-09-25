@@ -266,14 +266,16 @@ dtCompressedTile* dtTileCache::getTileAt(const int tx, const int ty, const int t
 dtCompressedTileRef dtTileCache::getTileRef(const dtCompressedTile* tile) const
 {
 	if (!tile) return 0;
-	auto it = tile - m_tiles;
+	//todo notice
+	const unsigned int it = (unsigned int)(tile - m_tiles);
 	return (dtCompressedTileRef)encodeTileId(tile->salt, it);
 }
 
 dtObstacleRef dtTileCache::getObstacleRef(const dtTileCacheObstacle* ob) const
 {
 	if (!ob) return 0;
-	auto idx = ob - m_obstacles;
+	// todo notice
+	const unsigned int idx = (unsigned int)(ob - m_obstacles);
 	return encodeObstacleId(ob->salt, idx);
 }
 
