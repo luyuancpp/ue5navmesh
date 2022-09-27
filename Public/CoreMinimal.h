@@ -11,6 +11,7 @@
 #include <unordered_set>
 
 #define NAVMESH_API
+#define _TCHAR_DEFINED
 
 #define CA_ASSUME(x)
 #define CA_SUPPRESS(x)
@@ -24,13 +25,8 @@
 #define LogDetour 1
 #define LogDebugRaycastCrash 1
 #define KINDA_SMALL_NUMBER	(1.e-4f)
-
-#ifdef  UNICODE                     
-#define __TEXT(quote) L##quote      
-#else   /* UNICODE */               
-#define __TEXT(quote) quote         
-#endif /* UNICODE */                
-#define TEXT(quote) __TEXT(quote)   
+       
+#define TEXT(quote) L##quote      
 
 enum LOG_VERBOSITY { NoLogging, Fatal, Error, Warning, Display, Log, Verbose, VeryVerbose, All, BreakOnLog };
 
