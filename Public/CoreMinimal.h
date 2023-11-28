@@ -6,6 +6,7 @@
 #include <math.h>
 #include <memory>
 #include <stdarg.h>
+#include <string>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
