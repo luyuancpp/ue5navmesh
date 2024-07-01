@@ -16,7 +16,7 @@
 
 #define CA_ASSUME(x)
 #define CA_SUPPRESS(x)
-#define check(x)
+inline void check(bool) {}
 #define DECLARE_LOG_CATEGORY_EXTERN(...)
 #define DEFINE_LOG_CATEGORY(...) 
 #define DEFINE_LOG_CATEGORY_STATIC(...)
