@@ -1,1 +1,1 @@
-# Navmesh
+# Navmesh for custom server
