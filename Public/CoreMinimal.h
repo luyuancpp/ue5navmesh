@@ -38,6 +38,7 @@ inline void check(bool) {}
 #endif
 #endif // !TEXT
 
+
 #ifndef _TCHAR_DEFINED
 #define _TCHAR_DEFINED
 #endif /* !_TCHAR_DEFINED */
