@@ -27,8 +27,16 @@ inline void check(bool) {}
 #define LogDebugRaycastCrash 1
 #define KINDA_SMALL_NUMBER	(1.e-4f)
        
-#undef  TEXT
-#define TEXT(quote) L##quote  
+#ifndef TEXT
+#ifdef WIN32
+#include <WS2tcpip.h>
+#include <Windows.h>
+#else // Not WIN32
+    #ifdef __linux__
+        #define TEXT(quote) L##quote  
+    #endif
+#endif
+#endif // !TEXT
 
 #ifndef _TCHAR_DEFINED
 #define _TCHAR_DEFINED
